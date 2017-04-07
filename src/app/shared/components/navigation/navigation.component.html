@@ -1,0 +1,53 @@
+<nav class="navbar navbar-toggleable-md navbar-light hz-bg-white fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" (click)="navbarCollapsed = !navbarCollapsed" [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--<button class="navbar-toggler navbar-toggler-right" type="button" 
+            data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" 
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="border:solid;"></span>
+    </button>-->
+    <a class="navbar-brand">
+        <img src="https://hz.nl/assets/svg/hz-logo.svg" style="height: 40px;" />
+    </a>
+    <div class="collapse navbar-collapse" [ngbCollapse]="!navbarCollapsed" id="navbarContent">
+        <!--id="navbarsExampleDefault">-->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="/home"><span>home</span> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Loguit</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+
+<!--<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/home']">
+                <img src="https://hz.nl/assets/svg/hz-logo.svg" alt="HZ University of Applied Sciences">
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li *ngFor="let item of menuitem"><a [routerLinkActive]="['active']" [routerLink]="[item.route]">{{item.naam}} </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                <a href="#"><span class="glyphicon glyphicon-user"></span> {{userinfo?.naam}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
